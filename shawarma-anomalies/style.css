@@ -1,0 +1,139 @@
+body {
+
+    margin: 0;
+    overflow: hidden;
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    font-family: Arial;
+}
+
+#game {
+
+    width: 1000px;
+    height: 600px;
+
+    background: #111;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 4px solid #222;
+}
+
+#room {
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    background:
+    radial-gradient(circle at center,
+    #333 0%,
+    #2201017d 60%,
+    #1f2300 100%);
+}
+
+/* MESA */
+
+.table {
+
+    width: 200px;
+    height: 100px;
+
+    background: #5c3b22;
+
+    position: absolute;
+
+    top: 490px;
+    left: 10px;
+
+    border-radius: 10px;
+}
+
+/* SILLA */
+
+.chair {
+
+    width: 80px;
+    height: 80px;
+
+    background: #442211;
+
+    position: absolute;
+
+    top: 510px;
+    left:225px;
+    border-radius: 10px;
+}
+.chair.second-chair {
+
+      width: 80px;
+    height: 80px;
+
+    background: #442211;
+
+    position: absolute;
+
+    top: 400px;
+    left:130px;
+    border-radius: 10px;
+}   
+
+/* LUZ */
+
+.light {
+
+    width: 800px;
+    height: 800px;
+
+    background: rgba(255, 230, 150, 0.25);
+
+    position: absolute;
+
+    top: 100px;
+    left: 350px;
+
+    border-radius: 50%;
+
+    filter: blur(40px);
+}
+
+#vhs {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+
+    animation: vhsMove 0.1s infinite;
+}
+
+@keyframes vhsMove {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(4px);
+    }
+}
